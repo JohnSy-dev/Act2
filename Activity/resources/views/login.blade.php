@@ -38,10 +38,11 @@
                          <button type="submit" class="btn btn-primary w-100">Login</button>
                      </form>
  
-  <!--  
-                     <div class="text-center mt-3">
-                         <a href="{{ route('register') }}">Don't have an account? Sign up</a>
-                     </div> -->
+                     {{-- 
+<div class="text-center mt-3">
+    <a href="{{ route('register') }}">Don't have an account? Sign up</a>
+</div>
+--}}
                  </div>
              </div>
          </div>

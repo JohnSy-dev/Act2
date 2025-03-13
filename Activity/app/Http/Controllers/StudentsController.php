@@ -5,11 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Students;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StudentsController extends Controller
 {
     public function index()
     {
+
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }
+
         $students = Students::all();
 
         return view('studentLists', compact('students'));
