@@ -14,7 +14,7 @@
      {
          // If already logged in, redirect to dashboard
          if (Auth::check()) {
-             return redirect()->route('cars.index');
+             return redirect()->route('std.index');
          }
          return view('login');
      }
@@ -29,17 +29,17 @@
          if (Auth::attempt($request->only('email', 'password'))) {
              // Regenerate session on successful login
              $request->session()->regenerate();
-             return redirect()->route('cars.index');
+             return redirect()->route('std.index');
          }
  
          return back()->withErrors(['email' => 'Invalid email or password']);
      }
  
-    /*
+    
      public function showRegisterForm()
      {
          if (Auth::check()) {
-             return redirect()->route('cars.index');
+             return redirect()->route('std.index');
          }
          return view('register');
      }
@@ -59,9 +59,9 @@
          ]);
  
          Auth::login($user);
-         return redirect()->route('cars.index');
+         return redirect()->route('std.index');
      }
- */
+
  
      public function logout(Request $request)
      {

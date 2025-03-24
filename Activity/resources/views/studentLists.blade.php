@@ -98,7 +98,7 @@
         </div>
     </div>
 
-     <!-- Logout Button at the Bottom -->
+</div>
      <div class="text-center mt-4">
          <form action="{{ route('logout') }}" method="POST">
              @csrf
